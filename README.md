@@ -1,9 +1,7 @@
-# Fujifilm Instax Sales & Business Performance Analysis (2022–2025)
+# Interactive Fujifilm Instax Sales & Business Performance Dashboard (2022–2025)
 
 ## Overview
-An interactive, multi-page (*5 pages*) analytical *dashboard* designed to examine Fujifilm Instax product sales performance from 2022 to 2025. This project transforms raw transactional data into strategic visual insights to monitor revenue growth, monthly and daily sales trends, product performance rankings by category, sales channel effectiveness (*Online* vs *Offline*), and payment method distribution using **Power BI Desktop** and **Python (Pillow)**.
-
-
+A fully **interactive, multi-page (*5 pages*) analytical *dashboard*** designed to examine Fujifilm Instax product sales performance from 2022 to 2025. Built with synced *slicers* (`Year`, `Month`, `Store / Channel`), dynamic cross-filtering, and custom sidebar navigation, this project transforms raw transactional data into strategic visual insights to monitor revenue growth, monthly and daily sales trends, product performance rankings by category, sales channel effectiveness (*Online* vs *Offline*), and payment method distribution using **Power BI Desktop** and **Python (Pillow)**.
 
 ---
 
@@ -25,16 +23,41 @@ The following table outlines the primary business and analytical questions answe
 - **Dynamic KPI & Growth Calculations (DAX):** Authored dynamic *measures* for core metrics (*Total Revenue*, *Total Orders*, *Products Sold*, and *Average Order Value*) alongside period-over-period variance comparisons (*vs 1st half period*).
 - **Chronological Day Sorting (`Day_Num`):** Implemented a sort-key column using `WEEKDAY(Fact_Sales[Tanggal], 2)` paired with *Sort by Column* to enforce chronological *Monday*–*Sunday* ordering without triggering *circular dependencies*.
 - **Programmatic UI/UX Design (*Custom Backgrounds*):** Used a **Python (`Pillow`)** script rendered at *high-DPI* (2x *scale* with *LANCZOS resampling*) to generate sharp, lightweight, and uniform *canvas backgrounds*, eliminating the performance overhead of stacked *native shapes* in Power BI.
+- **Interactive Sidebar Navigation:** Configured custom *Page Navigation* buttons on the left sidebar with hidden bottom report tabs (*Hidden Pages*) to deliver a seamless, *app-like UX*.
 
 ---
 
 ## Visualizations & Dashboard Layout (Power BI)
-- **Overview Page (Executive Summary):** Displays 4 dynamic KPI cards with *sparklines*, a monthly trend visual (*Area Chart* — *Sales Trend* 2022–2025), *Top 5 Best-Selling Products* (*Bar Chart*), a *Key Insights* panel, *Sales by Category* (*Donut Chart*), *Channel & Promo Analysis* (*Online vs Offline* & *Promo vs Regular*), and a *Payment Methods* summary.
-- **Sales Page (Temporal & Category Trends):** Features two symmetrical *Clustered Column Charts* breaking down *Revenue by Day of Week* (Monday–Sunday) and *Annual Revenue by Category* from 2022 to 2025.
-- **Products Page (Full SKU Performance):** A horizontal *Stacked Bar Chart* mapping the *Full Product Revenue Ranking* across all product SKUs, segmented by category (*Camera*, *Film*, *Accessories*).
-- **Channels Page (Store & Platform Breakdown):** A vertical *Stacked Column Chart* comparing *Revenue by Store / Platform* (*Website*, *Tokopedia Official*, *Surabaya Branch*, *Shopee Mall*, and *Jakarta Official Store*) with color coding distinguishing *Online* and *Offline* channels.
-- **Payments Page (Payment Method Distribution):** A vertical *Column Chart* with integrated data labels showcasing *Total Revenue by Payment Method* across *Credit Card*, *Bank Transfer*, *PayLater*, and *E-Wallet (GoPay/OVO)*.
-- **Interactive Sidebar Navigation:** Utilizes custom *Page Navigation* buttons on the left sidebar with hidden bottom report tabs (*Hidden Pages*) to deliver a clean, *app-like UX*.
+
+### 1. Overview Page (Executive Summary)
+Displays 4 dynamic KPI cards with *sparklines*, a monthly trend visual (*Area Chart* — *Sales Trend* 2022–2025), *Top 5 Best-Selling Products* (*Bar Chart*), a *Key Insights* panel, *Sales by Category* (*Donut Chart*), *Channel & Promo Analysis* (*Online vs Offline* & *Promo vs Regular*), and a *Payment Methods* summary.
+
+<img width="1321" height="737" alt="Overview" src="https://github.com/user-attachments/assets/4c104dd8-96a8-481e-ad5a-95874b9dfcfc" />
+
+
+### 2. Sales Page (Temporal & Category Trends)
+Features two symmetrical *Clustered Column Charts* breaking down *Revenue by Day of Week* (chronologically ordered from Monday to Sunday) and *Annual Revenue by Category* (*Camera*, *Film*, *Accessories*) from 2022 to 2025.
+
+<img width="1322" height="737" alt="Sales" src="https://github.com/user-attachments/assets/7a12acf1-226e-4e3a-90c1-5b742d788d8d" />
+
+
+### 3. Products Page (Full SKU Performance)
+A horizontal *Stacked Bar Chart* mapping the *Full Product Revenue Ranking* across all product SKUs, color-coded and segmented by category (*Camera*, *Film*, *Accessories*) to compare top revenue generators against volume drivers.
+
+<img width="1322" height="737" alt="Products" src="https://github.com/user-attachments/assets/45b062fd-9f74-4a55-8a42-dd64683c1a40" />
+
+
+### 4. Channels Page (Store & Platform Breakdown)
+A vertical *Stacked Column Chart* comparing *Revenue by Store / Platform* (*Website*, *Tokopedia Official*, *Surabaya Branch*, *Shopee Mall*, and *Jakarta Official Store*) with distinct color coding separating *Online* and *Offline* channels.
+
+<img width="1318" height="741" alt="Channels" src="https://github.com/user-attachments/assets/870fbf2d-6c25-4294-949b-be396b3d3a7a" />
+
+
+### 5. Payments Page (Payment Method Distribution)
+A vertical *Column Chart* with integrated data labels showcasing *Total Revenue by Payment Method* across *Credit Card*, *Bank Transfer*, *PayLater*, and *E-Wallet (GoPay/OVO)*.
+
+<img width="1325" height="742" alt="Payments" src="https://github.com/user-attachments/assets/3cef0a04-c857-4135-90ad-29f2529a4361" />
+
 
 ---
 
