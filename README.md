@@ -62,7 +62,7 @@ A vertical *Column Chart* with integrated data labels showcasing *Total Revenue 
 ### 6. Dashboard Demo
 
 
-https://github.com/user-attachments/assets/9897de56-e0c7-47ea-bd94-cc079616ea80
+https://github.com/user-attachments/assets/c9bf5aaa-8372-47a2-9f52-1f7d33b09899
 
 
 
