@@ -59,6 +59,14 @@ A vertical *Column Chart* with integrated data labels showcasing *Total Revenue 
 <img width="1325" height="742" alt="Payments" src="https://github.com/user-attachments/assets/3cef0a04-c857-4135-90ad-29f2529a4361" />
 
 
+### 6. Dashboard Demo
+
+
+https://github.com/user-attachments/assets/9897de56-e0c7-47ea-bd94-cc079616ea80
+
+
+
+
 ---
 
 ## Key Business Insights
